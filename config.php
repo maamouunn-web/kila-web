@@ -1,9 +1,9 @@
 <?php
 // ===== إعدادات الموقع: عدّل هذه القيم فقط =====
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'kila_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_NAME', getenv('DB_NAME') ?: 'kila_db');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
 
 define('SITE_NAME', 'منصة كيلا الرقمية');
 define('COMMITTEE', 'اللجنة العليا لأبناء كيلا');

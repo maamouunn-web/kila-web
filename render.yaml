@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: kila-digital-platform
+    runtime: docker
+    plan: starter
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
+    disk:
+      name: kila-uploads
+      mountPath: /var/www/html/uploads
+      sizeGB: 1
